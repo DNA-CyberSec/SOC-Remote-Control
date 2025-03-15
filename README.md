@@ -1,37 +1,83 @@
-# SOC Remote Control – Automated Cyber Operations
+# 🚀 SOC Remote Control – Automated Cyber Operations
 
-## Overview
-**SOC Remote Control** is a **Bash automation tool** that allows **SOC analysts** to remotely execute security operations while maintaining anonymity.  
-It enables cybersecurity teams to perform **network scanning, reconnaissance, and security assessments** via a remote server.
+![GitHub repo size](https://img.shields.io/github/repo-size/DNA-CyberSec/SOC-Remote-Control)
+![GitHub contributors](https://img.shields.io/github/contributors/DNA-CyberSec/SOC-Remote-Control)
+![License](https://img.shields.io/github/license/DNA-CyberSec/SOC-Remote-Control)
 
-## Features
-✅ **Automated SSH connection to remote server**  
-✅ **Executes Nmap and Whois lookups anonymously**  
-✅ **Logs results and audits security operations**  
-✅ **Uses TOR and Nipe for anonymized connections**  
-✅ **Supports manual or automated IP selection**  
+SOC Remote Control is an advanced Bash script designed to automate remote control, scanning, and reconnaissance tasks, enhancing security operations and red-team activities with a high level of anonymity and logging.
 
-## Project Structure
-- **Installations & Anonymity Check:**
-  - Installs required tools (Nmap, Torify, Whois, SSHpass).
-  - Checks if the connection is anonymous and displays the spoofed country.
-  - Allows the user to specify an IP address to scan.
+---
 
-- **Automated Remote Execution via SSH:**
-  - Retrieves server details (country, IP, uptime).
-  - Runs `whois` and `nmap` scans on a given target remotely.
+## 📌 Features
 
-- **Results & Logging:**
-  - Stores scan results and logs attack data locally for auditing.
+- 🔐 **Automatic SSH Connection** – Securely connect and execute remote commands.
+- 🌎 **Anonymity Check** – Ensures operations are performed anonymously.
+- 🔍 **Information Gathering** – Automated scanning (Nmap) and WHOIS lookups.
+- 📝 **Detailed Reporting** – Generates logs and audits all activities clearly.
+- 📂 **Structured Logs** – Records user actions, timestamps, and results systematically.
+- 🛠️ **Dependency Management** – Automatically checks and installs essential tools.
 
-## Tools Used
-- 🔹 **Sshpass** – Automates SSH authentication.
-- 🔹 **Nipe** – Routes traffic through Tor for anonymity.
-- 🔹 **Torify** – Wraps commands to use the Tor network.
-- 🔹 **Nmap** – Network scanning and reconnaissance.
-- 🔹 **Whois** – Gathers domain and IP registration details.
+---
 
-## Installation & Usage
+## 🎯 Usage
+
+Clone this repository:
+
 ```bash
+git clone https://github.com/DNA-CyberSec/SOC-Remote-Control.git
+cd SOC-Remote-Control
 chmod +x soc_remote_control.sh
-sudo ./soc_remote_control.sh
+```
+
+### Run the script:
+
+```bash
+./soc_remote_control.sh
+```
+
+Follow the interactive prompts to execute the desired actions.
+
+---
+
+## 📦 Tools & Dependencies
+
+The script automatically checks and installs:
+
+- SSHpass (For automated SSH login)
+- Nmap (Network scanning)
+- Whois (Domain and IP information)
+- Tor & Nipe (Anonymity and spoofing checks)
+
+---
+
+## 📂 Project Structure
+
+```
+SOC-Remote-Control/
+├── 📂 logs/
+│   └── 📑 activity.log
+├── 🖥️ soc_remote_control.sh
+└── 📖 README.md
+```
+
+---
+
+## 🔐 Security Notice
+
+This tool is designed for educational purposes and authorized penetration testing only. Do not use against systems without explicit permission.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🧑‍💻 Author
+
+- **Rami Hacmon** – [GitHub Profile](https://github.com/DNA-CyberSec)
+
+Feel free to contribute, fork, or open issues!
+
+⭐ **Star this repository if you find it helpful!**
